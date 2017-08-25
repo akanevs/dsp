@@ -19,7 +19,17 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+pwd: prints current working directory
+mkdir: creates a directory
+rmdir: deletes directory
+touch: creates new empty file with timing info
+rm: deletes a file
+mv: move or rename a file
+ls -a: list files including dot files
+cp: copy file
+env: print out current environment specifications
+cat: stream a file
 
 ---
 
@@ -34,7 +44,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+ls: list files in directory
+ls -a: same as ls, but also include names that begin with .
+ls -l: same as ls, but in long format
+ls -lh: same as ls -l, but with unit suffixes
+ls -lah: same as ls -lh, but also includes names that start with .
+ls -t: same as ls, but sorted by time
+ls -Glp: same as ls, but now colorized, long, and with slash after each filename
 
 ---
 
@@ -42,7 +59,12 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+-c 	Displays files by file timestamp.
+-d 	Displays only directories.
+-m 	Displays the names as a comma-separated list.
+-r 	Displays files in reverse order.
+-R 	Displays subdirectories as well.
 
 ---
 
@@ -50,7 +72,8 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> >  The xargs utility reads space, tab, newline and end-of-file delimited strings from the standard input and executes utility
+     with the strings as arguments.
 
  
 
