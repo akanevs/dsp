@@ -33,9 +33,13 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 Example:
 
 >>> temp = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+
 >>> sorted(temp)
+
 [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+
 >>> sorted(temp, key=lambda pair: pair[1])
+
 [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
 
 ---
