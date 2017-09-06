@@ -28,7 +28,15 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lambda functions are used to enable functional programming, and give the ability to pass functions to other functions, which can be much more convenient. For example, one may pass a function as an argument using lambdas.
+
+Example:
+
+>>> temp = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+>>> sorted(temp)
+[(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+>>> sorted(temp, key=lambda pair: pair[1])
+[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
 
 ---
 
