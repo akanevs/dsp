@@ -66,8 +66,11 @@ list(map((lambda x: x **2), dat))
 
 Now, we do this using a filter:
 
+datsquared = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
+list( filter((lambda x: sqrt(x)<10 ), datsquared))
 
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 ---
 
