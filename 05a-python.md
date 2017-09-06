@@ -48,7 +48,34 @@ sorted(temp, key=lambda pair: pair[1])
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions allow for creation of lists using a compact format by specifying an expression that is applied to each member of some sequence/iterable. A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. 
+
+For example, to create a list of squares:
+
+squares = [x**2 for x in range(10)]
+
+print(squares)
+
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+We can also do this using a map:
+
+def squares_map(t):
+     result = []
+     for s in t:
+             result.append(s**2)
+     return result
+
+dat = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+squares_map(dat)
+
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+Now, we do this using a filter:
+
+
+
 
 ---
 
