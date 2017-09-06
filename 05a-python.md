@@ -60,15 +60,7 @@ print(squares)
 
 We can also do this using a map:
 
-def squares_map(t):
-     result = []
-     for s in t:
-             result.append(s**2)
-     return result
-
-dat = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-squares_map(dat)
+list(map((lambda x: x **2), dat))
 
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
