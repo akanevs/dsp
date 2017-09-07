@@ -109,8 +109,28 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    list = list1 + list2
-    
-    print(sorted(list))
+    #quadratic merge
+    #list = list1 + list2
+    #print(sorted(list))
     #raise NotImplementedError
+    
+    #linear merge
+    list3 = []
+    while len(list1)!=0 and len(list2)!=0:
+        s1 = list1[0]
+        s2 = list2[0]
+  
+        if s1<s2 or s1==s2:
+            list3.append(s1)
+            list1.remove(s1)
+        else:
+            list3.append(s2)
+            list2.remove(s2)           
+
+    if len(list1)>0:
+        list3 = list3 + list1
+    elif len(list2)>0:
+        list3 = list3 + list2
+    
+    print(list3)
     
