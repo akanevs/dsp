@@ -20,11 +20,11 @@ a bit larger but still small.
 
 Text output:
 
-firsts
+##firsts
 ======
 mean: 7.20109443044 var: 2.01802730092 std: 1.42057287772 mode: 7.5
 
-others
+##others
 ======
 mean: 7.32585561497 var: 1.9437810259 std: 1.39419547621 mode: 7.0
 
