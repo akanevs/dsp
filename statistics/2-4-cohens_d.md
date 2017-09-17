@@ -16,6 +16,110 @@ For the pregnancy length, the Cohen distance is 0.029 standard deviations, which
 quite small, while for the birth weight, the Cohen distance is -0.089, which is quite
 a bit larger but still small.
 
+-----------------------
+
+Python code:
+
+preg = nsfg.ReadFemPreg()
+live = preg[preg.outcome == 1]
+
+#hist = thinkstats2.Hist(live.birthwgt_lb, label='birthwgt_lb')
+#thinkplot.Hist(hist)
+#thinkplot.Show(xlabel='pounds', ylabel='frequency')
+
+#for weeks, freq in hist.Smallest(10):
+#    print(weeks, freq)
+#for weeks, freq in hist.Largest(10):
+#    print(weeks, freq)
+
+firsts = live[live.birthord == 1]
+others = live[live.birthord != 1]
+first_hist = thinkstats2.Hist(firsts.prglngth)
+other_hist = thinkstats2.Hist(others.prglngth)
+
+#width = 0.45
+#thinkplot.PrePlot(2)
+#thinkplot.Hist(first_hist, align='right', width=width)
+#thinkplot.Hist(other_hist, align='left', width=width)
+#thinkplot.Show(xlabel='weeks', ylabel='frequency',
+#xlim=[27, 46])
+
+mean = live.prglngth.mean()
+var = live.prglngth.var()
+std = live.prglngth.std()
+print(mean, var, std)
+
+#first_hist = thinkstats2.Hist(firsts.totalwgt_lb)
+#other_hist = thinkstats2.Hist(others.totalwgt_lb)
+#width = 0.25
+#thinkplot.PrePlot(2)
+#thinkplot.Hist(first_hist, align='right', width=width)
+#thinkplot.Hist(other_hist, align='left', width=width)
+#thinkplot.Show(xlabel='lbs', ylabel='frequency',
+#xlim=[0, 16])
+
+#for total weight
+first_hist = thinkstats2.Hist(firsts.totalwgt_lb)
+other_hist = thinkstats2.Hist(others.totalwgt_lb)
+width = 0.25
+thinkplot.PrePlot(2, cols=2)
+thinkplot.Hist(first_hist, align='center', width=width, label='firsts', color='red')
+thinkplot.Config(xlabel='lbs',
+ylabel='frequency',
+axis=[0, 16, 0, 180])
+#thinkplot.Hist(other_hist, align='left', width=width)
+#thinkplot.Show(xlabel='lbs', ylabel='frequency',
+#xlim=[0, 16])
+thinkplot.PrePlot(2)
+thinkplot.SubPlot(2)
+thinkplot.Hist(other_hist, align='center', width=width, label='others')
+thinkplot.Show(xlabel='lbs',
+axis=[0, 16, 0, 180])  
+#thinkplot.Hist([first_hist, other_hist])
+#thinkplot.Show(xlabel='lbs',
+#axis=[0, 16, 0, 200])
+
+mean = firsts.totalwgt_lb.mean()
+var = firsts.totalwgt_lb.var()
+std = firsts.totalwgt_lb.std()
+mode_freq = 0
+key = 0
+for key in first_hist:
+    val = first_hist[key]
+    if val > mode_freq:
+        mode_freq = val
+        mode = key
+print(mode, mode_freq)
+print('firsts')
+print('mean:', mean, 'var:', var, 'std:', std, 'mode:', mode)
+
+mean = others.totalwgt_lb.mean()
+var = others.totalwgt_lb.var()
+std = others.totalwgt_lb.std()
+mode_freq = 0
+key = 0
+for key in other_hist:
+    val = other_hist[key]
+    if val > mode_freq:
+        mode_freq = val
+        mode = key
+print(mode, mode_freq)
+print('others')
+print('mean:', mean, 'var:', var, 'std:', std, 'mode:', mode)
+
+#pregnancy length
+d = thinkstats2.CohenEffectSize(firsts.prglngth, others.prglngth)
+print('Cohen d', d)
+
+#birth weight   
+d = thinkstats2.CohenEffectSize(firsts.totalwgt_lb, others.totalwgt_lb)
+print('Cohen d', d)
+
+------------
+
+
+
+
 
 Text output:
 
