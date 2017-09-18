@@ -18,7 +18,9 @@ df = pandas.DataFrame(array)
 hist = thinkstats2.Hist(df[0])
 
 #plot histogram
+
 #thinkplot.Hist(hist)
+
 #thinkplot.Show(xlabel='value', ylabel='frequency')
 
 #construct PMF
