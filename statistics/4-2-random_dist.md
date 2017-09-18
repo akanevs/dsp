@@ -12,9 +12,11 @@ Code below:
 array = 1.0*np.random.random(1000)
     
 df = pandas.DataFrame(array)
+
 #print(df[0])
 
 #random numbers between 0 and 1
+
 hist = thinkstats2.Hist(df[0])
 
 #plot histogram
@@ -24,20 +26,28 @@ hist = thinkstats2.Hist(df[0])
 #thinkplot.Show(xlabel='value', ylabel='frequency')
 
 #construct PMF
+
 pmf = thinkstats2.Pmf(hist)
 
 #plot PMF
+
 thinkplot.PrePlot(1)
+
 thinkplot.Pmfs([pmf])
+
 #thinkplot.Config(xlabel='Number of children u18yrs', ylabel='PMF')
+
 thinkplot.Show(xlabel='Value of random number', ylabel='PMF',width=0.10)
 
 print('Actual mean', pmf.Mean())
 
 #computer CDF
+
 cdf = thinkstats2.Cdf(pmf, label='array')
 
 #plot CDF
+
 thinkplot.Cdf(cdf)
+
 thinkplot.Show(xlabel='Value', ylabel='CDF')
 
