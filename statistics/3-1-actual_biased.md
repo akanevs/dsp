@@ -2,7 +2,7 @@
 
 >> 1b.png shows the result.  In the biased distribution there are fewer low
 number of children under 18, and more higher number of children under 18. The
-mean for the biased distribution is 2.40, roughly (1.02) 135% higher than for the unbiased result.
+mean for the biased distribution is 2.40, roughly 135% higher (vs. 1.02) than for the unbiased result.
 The  mean  of  the  biased  distribution  is  29.1, almost 25% higher than the actual mean.
 
 Python code:
